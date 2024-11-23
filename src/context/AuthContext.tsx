@@ -60,8 +60,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     await logoutUser();
     setIsLoggedIn(false);
     setUser(null);
-    document.cookie =
-      "auth_token=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    document.cookie = `auth_token=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/ domain=${
+      import.meta.env.VITE_COOKIE_DOMAIN
+    }`;
   };
 
   const value = {
