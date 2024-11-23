@@ -61,7 +61,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     await logoutUser();
     setIsLoggedIn(false);
     setUser(null);
-    Cookies.remove("auth_token", { path: "/" });
+    Cookies.remove("auth_token", {
+      path: "/",
+      sameSite: "None",
+      secure: true,
+      domain: import.meta.env.COOKIE_DOMAIN,
+    });
   };
 
   const value = {
