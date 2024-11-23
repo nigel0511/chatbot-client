@@ -6,7 +6,6 @@ import { Link, useLocation } from "react-router-dom";
 const Header = () => {
   const auth = useAuth();
   const location = useLocation();
-  console.log(location);
   return (
     <div className="fixed flex w-full p-6 bg-white z-10 h-[80px]">
       <Link className="mr-auto" to="/">
