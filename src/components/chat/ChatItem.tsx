@@ -39,7 +39,7 @@ const ChatItem = ({
       <Avatar sx={{ ml: "0", background: "transparent" }}>
         <img src="BCapital.png" alt="openai" width={"30px"} />
       </Avatar>
-      <div className="flex items-center">
+      <div className="flex flex-col items-center">
         {!messageBlocks && (
           <Typography sx={{ fontSize: "20px" }}>{content}</Typography>
         )}
@@ -58,7 +58,7 @@ const ChatItem = ({
     </div>
   ) : (
     <div className="flex py-2 px-4 gap-2 bg-[#004d5612] rounded-lg my-1 items-center ml-auto">
-      <div>
+      <div className="flex flex-col">
         {!messageBlocks && (
           <Typography sx={{ fontSize: "20px" }}>{content}</Typography>
         )}
