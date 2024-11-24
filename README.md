@@ -30,8 +30,8 @@ To get started with this project locally, follow these steps:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-repository/frontend.git
-cd frontend
+git clone https://github.com/nigel0511/chatbot-client.git
+cd chatbot-client
 ```
 
 ### 2. Install dependencies
