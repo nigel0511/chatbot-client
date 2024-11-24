@@ -39,9 +39,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         setIsLoggedIn(true);
       }
     }
-    setTimeout(() => {
-      checkStatus();
-    }, 2000);
+    checkStatus();
   }, []);
   const login = async (email: string, password: string) => {
     const data = await loginUser(email, password);
@@ -67,6 +65,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       secure: true,
       domain: import.meta.env.COOKIE_DOMAIN,
     });
+    window.location.reload();
   };
 
   const value = {
